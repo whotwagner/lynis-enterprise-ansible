@@ -14,7 +14,7 @@ None.
 ## Installation
 
 ```
-git clone https://github.com/whotwagner/lynis-enterprise
+git clone https://github.com/whotwagner/lynis-enterprise-ansible
 ```
 
 ## Role Variables
