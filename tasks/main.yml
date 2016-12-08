@@ -1,0 +1,16 @@
+- include: debian.yml
+  when: ansible_os_family == 'Debian' 
+
+- name: configure enterprise-settings
+  template:
+    src: custom.prf.j2
+    dest: /etc/lynis/custom.prf
+  when: lynis_licensekey != false
+
+- name: cronjob lynis
+  cron: name="lynis" hour=23 minute=30 job="/usr/sbin/lynis audit system --upload --auditor "automated" --cronjob --quiet"
+  when: lynis_licensekey != false and lynis_cron != false
+
+- name: run lynis
+  shell: lynis audit system --upload
+  when: lynis_licensekey != false and lynis_run != false

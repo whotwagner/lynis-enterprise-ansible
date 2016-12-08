@@ -1,0 +1,5 @@
+lynis_licensekey: false
+lynis_uploadserver: "portal.cisofy.com"
+lynis_repo: "https://packages.cisofy.com/community/lynis/deb/"
+lynis_run: true
+lynis_cron: true

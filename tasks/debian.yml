@@ -1,0 +1,17 @@
+- name: install apt-https
+  apt: name=apt-transport-https state=present
+
+- name: lynis apt key
+  apt_key: url=https://packages.cisofy.com/keys/cisofy-software-public.key state=present
+
+- name: cisofy-lynis deb repository
+  apt_repository: repo='deb {{lynis_repo}} {{ ansible_distribution_release }} main' state=present
+
+- name: install lynis
+  apt: name=lynis state=present update_cache=yes
+
+- name: install lynis-plugins
+  apt: name=lynis-plugins state=present
+  when: lynis_licensekey != false
+
+
