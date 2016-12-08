@@ -19,7 +19,7 @@ git clone https://github.com/whotwagner/lynis-enterprise-ansible
 
 ## Role Variables
 
-Some variables to change for enterprise installations:
+The following variables can be used for enterprise-installations:
 ```
 lynis_licensekey: <YOUR-ENTERPRISE-LICENSE-KEY>
 lynis_uploadserver: "portal.cisofy.com"
