@@ -1,6 +1,6 @@
 # Ansible Role: Lynis
 
-This role is a lynis-enterprise-role of toscom
+This role is the lynis-enterprise-role of toscom
 
 ## Requirements
 
